@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <h1 id="mainTitle"></h1>
+
+    <script>
+//     Una funzione per capire se la parola è
+// palindroma
+// L'utente sceglie pari o dispari e un numero
+// da 1 a 5.
+// Generiamo un numero random (sempre da 1
+// a 5) per il computer.
+// Sommiamo i due numeri e dichiariamo chi ha
+// vinto.
+
+    //   function isPalindrome(word) {
+    //
+    //     var len = Math.floor(word.length / 2);
+    //     for (var i = 0; i < len; i++){
+    //     if (word[i] !== word[word.length - i - 1]) {
+    //
+    //       return false;
+    //     }
+    //
+    //     return true;
+    //   }
+    // }
+    //   var word = prompt("inserisci una parola per vedere se è palindroma").toLowerCase();
+    //   console.log(isPalindrome(word));
+
+
+      var player = prompt("scegli pari o dispari");
+      var numPlayer = parseInt(prompt("scegli un numero tra 1 a 5"));
+      var numPc = Math.floor(Math.random() * (6 - 1) + 1);
+      var sum = numPlayer + numPc;
+
+      function isPair(num1 , num2) {
+
+        var sum = num1 + num2;
+        console.log(numPlayer,numPc,sum);
+        if (sum % 2 == 0) {
+
+          if (player == "pari" || player == "Pari") {
+
+            console.log("Hai vinto");
+          } else {
+
+            console.log("Hai perso");
+          }
+        } else {
+
+          if (player == "pari") {
+
+            console.log("hai perso");
+          } else {
+
+            console.log("hai vinto");
+          }
+        }
+      }
+
+      isPair(numPlayer,numPc);
+
+
+
+      </script>
+    </body>
+    </html>
